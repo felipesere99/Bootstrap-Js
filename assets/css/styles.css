@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    justify-content: space-around;
+    background-color: rgb(70, 130, 180);
+    z-index: 1;
+}
+
+.secciones a {
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.imagen-logo {
+    height: 50px;
+}
+
+#vehiculos {
+    background-color: rgba(70, 130, 180, 0.5);
+}
+
+.titulo-datos {
+    padding: 10px;
+    text-align: center;
+}
+
+.seccion-datos {
+    background-image: url("https://cdn-1.motorsport.com/images/amp/0oOj4mj0/s1000/spa-francorchamps-aerial-view-.jpg");
+}
+.datos_usuario {
+    width: 35%;
+    margin: 100px auto 100px;
+    padding: 20px;
+    background-color: rgb(242, 242, 107);
+    border-radius: 7px;
+}
+
+@media (max-width: 1280px) {
+    .datos_usuario {
+        width: 80%;
+    }
+}
+
+.boton-datos {
+    text-align: center;
+}
+.vehiculos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: auto;
+    height: 20%;
+}
+.contenedor {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.img-vehiculo {
+    width: 250px;
+    max-height: 300px;
+    text-align: center;
+ }
+
+#publicar {
+    background-image: url("https://cdn.motorlat.com/images/17000/17652_motorlat-f1-gp-de-la-emilia-romagna-el-autodromo-enzo-e-dino-ferrari-vuelve-a-la-maxima-categoria-v85.jpg");
+    padding: 100px auto 100px;
+}

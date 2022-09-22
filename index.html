@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotora Js</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+    <navbar class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <div class="logo">
+            <h1>Automotora <img class="imagen-logo" src="./assets/img/Unofficial_JavaScript_logo_2.svg.png"></h1>
+        </div>
+        <div class="secciones">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#datos-usuario">Ingresar datos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#vehiculos">Vehiculos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#publicar">Publicar mi vehiculo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </navbar>
+
+    <section id="datos-usuario" class="seccion-datos">
+        <div class="container-fluid">
+            <form >
+            <div class="datos_usuario">
+                <div class="titulo-datos">
+                    <h2>Complete sus datos:</h2>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Nombre y apellido</span>
+                    </div>
+                    <input type="text" id="nombre" name="nombre" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Telefono celular</span>
+                    </div>
+                    <input type="text" id="telefono" name="telefono" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Edad</span>
+                    </div>
+                    <input type="number" id="edad" name="edad" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" min="1" max="99">
+                  </div>
+                  <div class="boton-datos">
+                    <button type="button" onclick="DatosCliente()" class="btn btn-primary">Guardar</button>
+                  </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
+    <section id="vehiculos">
+        <div class="container-fluid">
+            <div class="contenedor" id="contenedor">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="publicar">
+        <div class="container-fluid">
+          <form  id="form-vehiculo">
+            <div class="datos_usuario">
+                <div class="titulo-datos">
+                    <h2>Publique su vehiculo!</h2>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Marca y modelo:</span>
+                    </div>
+                    <input type="text" id="modelo" name="modelo" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Año:</span>
+                    </div>
+                    <input type="text" id="year" name="year" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Kilometros:</span>
+                    </div>
+                    <input type="text" id="km" name="km" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Precio:</span>
+                    </div>
+                    <input type="text" id="precio" name="precio" required="true" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="boton-datos">
+                    <input type="button" value="Guardar" name='enviar'class="btn btn-primary" id="guardar-vehiculo"></input>
+                  </div>
+            </div>
+        </form>
+        </div>
+
+    </section>
+
+    <section>
+
+      <div class="container-fluid"> </div>
+
+    </section>
+
+    <footer class="text-center text-white" style="background-color: steelblue;" id="contacto">
+      <!-- Grid container -->
+      <div class="container p-4">
+        Gmail: felipesere99@gmail.com // LinkedIn: https://www.linkedin.com/in/felipe-sere99/
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        
+        © 2022 Copyright:
+        <a class="text-white" href="#">Automotora Js</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/GuardarDatosCliente.js"></script>
+    <script src="./assets/js/sticky.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
